@@ -22,109 +22,187 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.txtArtifactName = New System.Windows.Forms.TextBox()
+        Me.txtCountry = New System.Windows.Forms.TextBox()
+        Me.numYearFound = New System.Windows.Forms.NumericUpDown()
+        Me.cbCondition = New System.Windows.Forms.ComboBox()
+        Me.btnCreate = New System.Windows.Forms.Button()
+        Me.btnDelete = New System.Windows.Forms.Button()
+        Me.btnUpdate = New System.Windows.Forms.Button()
+        Me.btnRead = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.txtHiddenID = New System.Windows.Forms.TextBox()
+        CType(Me.numYearFound, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'TextBox1
+        'txtArtifactName
         '
-        Me.TextBox1.Location = New System.Drawing.Point(510, 76)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 0
+        Me.txtArtifactName.Location = New System.Drawing.Point(193, 53)
+        Me.txtArtifactName.Name = "txtArtifactName"
+        Me.txtArtifactName.Size = New System.Drawing.Size(153, 20)
+        Me.txtArtifactName.TabIndex = 0
         '
-        'TextBox2
+        'txtCountry
         '
-        Me.TextBox2.Location = New System.Drawing.Point(550, 103)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 1
+        Me.txtCountry.Location = New System.Drawing.Point(193, 79)
+        Me.txtCountry.Name = "txtCountry"
+        Me.txtCountry.Size = New System.Drawing.Size(153, 20)
+        Me.txtCountry.TabIndex = 1
         '
-        'NumericUpDown1
+        'numYearFound
         '
-        Me.NumericUpDown1.Location = New System.Drawing.Point(510, 155)
-        Me.NumericUpDown1.Name = "NumericUpDown1"
-        Me.NumericUpDown1.Size = New System.Drawing.Size(120, 20)
-        Me.NumericUpDown1.TabIndex = 2
+        Me.numYearFound.Location = New System.Drawing.Point(193, 105)
+        Me.numYearFound.Name = "numYearFound"
+        Me.numYearFound.Size = New System.Drawing.Size(153, 20)
+        Me.numYearFound.TabIndex = 2
         '
-        'ComboBox1
+        'cbCondition
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(437, 229)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox1.TabIndex = 3
+        Me.cbCondition.FormattingEnabled = True
+        Me.cbCondition.Items.AddRange(New Object() {"Excellent", "Good", "Fair", "Poor"})
+        Me.cbCondition.Location = New System.Drawing.Point(193, 131)
+        Me.cbCondition.Name = "cbCondition"
+        Me.cbCondition.Size = New System.Drawing.Size(153, 21)
+        Me.cbCondition.TabIndex = 3
         '
-        'Button1
+        'btnCreate
         '
-        Me.Button1.Location = New System.Drawing.Point(303, 312)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(88, 31)
-        Me.Button1.TabIndex = 4
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnCreate.Location = New System.Drawing.Point(172, 390)
+        Me.btnCreate.Name = "btnCreate"
+        Me.btnCreate.Size = New System.Drawing.Size(92, 31)
+        Me.btnCreate.TabIndex = 4
+        Me.btnCreate.Text = "Save Artifact"
+        Me.btnCreate.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btnDelete
         '
-        Me.Button2.Location = New System.Drawing.Point(413, 312)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(88, 31)
-        Me.Button2.TabIndex = 4
-        Me.Button2.Text = "Button1"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnDelete.Location = New System.Drawing.Point(405, 390)
+        Me.btnDelete.Name = "btnDelete"
+        Me.btnDelete.Size = New System.Drawing.Size(92, 31)
+        Me.btnDelete.TabIndex = 4
+        Me.btnDelete.Text = "Delete Artifact"
+        Me.btnDelete.UseVisualStyleBackColor = True
         '
-        'Button3
+        'btnUpdate
         '
-        Me.Button3.Location = New System.Drawing.Point(534, 312)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(88, 31)
-        Me.Button3.TabIndex = 4
-        Me.Button3.Text = "Button1"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btnUpdate.Location = New System.Drawing.Point(289, 390)
+        Me.btnUpdate.Name = "btnUpdate"
+        Me.btnUpdate.Size = New System.Drawing.Size(92, 31)
+        Me.btnUpdate.TabIndex = 4
+        Me.btnUpdate.Text = "Update Artifact"
+        Me.btnUpdate.UseVisualStyleBackColor = True
         '
-        'Button4
+        'btnRead
         '
-        Me.Button4.Location = New System.Drawing.Point(644, 312)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(88, 31)
-        Me.Button4.TabIndex = 4
-        Me.Button4.Text = "Button1"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.btnRead.Location = New System.Drawing.Point(527, 390)
+        Me.btnRead.Name = "btnRead"
+        Me.btnRead.Size = New System.Drawing.Size(92, 31)
+        Me.btnRead.TabIndex = 4
+        Me.btnRead.Text = "Load records"
+        Me.btnRead.UseVisualStyleBackColor = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(83, 54)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(104, 16)
+        Me.Label1.TabIndex = 5
+        Me.Label1.Text = "Artifact Name:"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(79, 80)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(108, 16)
+        Me.Label2.TabIndex = 5
+        Me.Label2.Text = "Origin Country:"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(59, 105)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(128, 16)
+        Me.Label3.TabIndex = 5
+        Me.Label3.Text = "Year Discovered:"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(111, 132)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(76, 16)
+        Me.Label4.TabIndex = 5
+        Me.Label4.Text = "Condition:"
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.AllowUserToOrderColumns = True
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(114, 158)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(562, 226)
+        Me.DataGridView1.TabIndex = 6
+        '
+        'txtHiddenID
+        '
+        Me.txtHiddenID.Location = New System.Drawing.Point(352, 54)
+        Me.txtHiddenID.Name = "txtHiddenID"
+        Me.txtHiddenID.Size = New System.Drawing.Size(153, 20)
+        Me.txtHiddenID.TabIndex = 7
+        Me.txtHiddenID.Visible = False
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.NumericUpDown1)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtHiddenID)
+        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.btnRead)
+        Me.Controls.Add(Me.btnUpdate)
+        Me.Controls.Add(Me.btnDelete)
+        Me.Controls.Add(Me.btnCreate)
+        Me.Controls.Add(Me.cbCondition)
+        Me.Controls.Add(Me.numYearFound)
+        Me.Controls.Add(Me.txtCountry)
+        Me.Controls.Add(Me.txtArtifactName)
         Me.Name = "Form1"
         Me.Text = "Form1"
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.numYearFound, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents NumericUpDown1 As NumericUpDown
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
+    Friend WithEvents txtArtifactName As TextBox
+    Friend WithEvents txtCountry As TextBox
+    Friend WithEvents numYearFound As NumericUpDown
+    Friend WithEvents cbCondition As ComboBox
+    Friend WithEvents btnCreate As Button
+    Friend WithEvents btnDelete As Button
+    Friend WithEvents btnUpdate As Button
+    Friend WithEvents btnRead As Button
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents txtHiddenID As TextBox
 End Class
